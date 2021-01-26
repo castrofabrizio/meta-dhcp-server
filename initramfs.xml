@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<include name="raspberrypi-dunfell.xml"/>
+
+	<project
+		remote="github"
+		name="castrofabrizio/meta-dhcp-server"
+		path="sources/meta-dhcp-server"
+		revision="dunfell"
+	>
+		<copyfile
+			src="conf/templates/raspberrypi/core-image-initramfs-unionfs/local.conf"
+			dest="build/conf/local.conf"
+		/>
+		<copyfile
+			src="conf/templates/raspberrypi/core-image-initramfs-unionfs/bblayers.conf"
+			dest="build/conf/bblayers.conf"
+		/>
+	</project>
+</manifest>
